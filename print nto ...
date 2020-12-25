@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+
+int nto(int n);
+int nto(int n)
+{
+	for( int i=2;i<= sqrt(n);i++)
+	{
+		if(n%i==0){
+			return false;
+		}
+	}
+}
+
+int main()
+{
+	for(int i=1000;i<=99999;i++)
+	{
+		if(nto(i))
+		{
+			printf("%d \t",i);
+		}
+	}
+	
+	return 0;
+}
