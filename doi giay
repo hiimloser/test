@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+int main()
+{
+	int n;
+	printf("so giay = ");
+	scanf("%d",&n);
+	
+	int c,k,h,t;
+	
+	if(n>3600)
+	{
+		for(int i=1;i<=n;i++)
+		{
+			c=n/60;
+			k=c/60;
+			h=c%60;
+			t=n-k*60*60-h*60;
+		}
+		printf("%dh-%dp-%ds",k,h,t);
+	}
+	else if(n<3600)
+	{
+		for(int i=1;i<=n;i++)
+		{
+			c=n/60;
+			k=n%60;
+		}
+		printf("%dp-%ds",k,c);
+	}
+	else
+	{
+		printf("1h-0p-0s");
+	}
+	
+	return 0;
+}
